@@ -37,7 +37,7 @@ const Details = ({ ninja }) => {
             <p>{ ninja.email }</p>
             <p>{ ninja.website }</p>
             <p>{ ninja.address.city }</p>
-            <Link href="/ninjas/"><a>Back</a></Link>
+            <Link href="/ninjas/" style="text-align:center"><a>Back</a></Link>
         </div>
      );
 }
