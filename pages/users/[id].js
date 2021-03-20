@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Head from 'next/head';
 import styles from '../../styles/User.module.css';
+import users from '../../utils/users';
 
 export const getStaticPaths = async() =>{
     // const res = await fetch('https://jsonplaceholder.typicode.com/users');
-    const res = await fetch('http://localhost:3000/api/users');
-    const data = await res.json();
-
+    // const res = await fetch('http://localhost:3000/api/users');
+    // const data = await res.json();
+    const data = users;
     const paths = data.map((user)=>{
         return {
             params: { 
@@ -23,9 +24,9 @@ export const getStaticPaths = async() =>{
 
 export const getStaticProps = async (context) => {
     const id = context.params.id;
-    const res = await fetch(`http://localhost:3000/api/users/${id}`);
-    const data = await res.json();
-
+   // const res = await fetch(`http://localhost:3000/api/users/${id}`);
+    //const data = await res.json();
+    const data = users.find((user)=>user.id==id);
     return{
         props: { 
             user: data 
