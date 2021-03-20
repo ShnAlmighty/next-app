@@ -7,7 +7,10 @@ export const getStaticPaths = async() =>{
     // const res = await fetch('https://jsonplaceholder.typicode.com/users');
     // const res = await fetch('http://localhost:3000/api/users');
     // const data = await res.json();
-    const data = users;
+    //const data = users;
+    const res = await fetch('https://patnaik-next-app.vercel.app/api/users/');
+    const data = await res.json();
+    //const data = res;
     const paths = data.map((user)=>{
         return {
             params: { 
@@ -26,7 +29,10 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
    // const res = await fetch(`http://localhost:3000/api/users/${id}`);
     //const data = await res.json();
-    const data = users.find((user)=>user.id==id);
+    //const data = users.find((user)=>user.id==id);
+    const res = await fetch(`https://patnaik-next-app.vercel.app/api/users/${id}`);
+    const data = await res.json();
+
     return{
         props: { 
             user: data 
