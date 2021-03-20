@@ -47,11 +47,13 @@ const Details = ({ user }) => {
         <title>Users List | { user.id } </title>
         <meta name="keywords" content="users"/>
         </Head> 
-        <div>
-            <h1> { user.name } </h1>
+        <div className={styles.container}>
+        <h1> { user.name } </h1>
+        <div className={styles.info}>
             <p>Email: { user.email }</p>
             <p>Designation: { user.designation }</p>
             <p>Address: { user.address.city }, { user.address.country }</p>
+            </div>
             <Link href="/users/"><a className={styles.back}>Back</a></Link>
         </div>
         </>

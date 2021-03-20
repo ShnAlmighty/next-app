@@ -10,7 +10,7 @@ const About = () => {
         </Head>
         <div>
             <h1 className={styles.h2}>About</h1>
-            <p className={styles.container}>This is the about page</p>
+            <p className={styles.container}>This web app is developed using Next.js</p>
         </div>
         </>
      );

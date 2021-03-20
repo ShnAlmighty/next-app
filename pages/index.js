@@ -10,8 +10,8 @@ export default function Home() {
         <meta name="keywords" content="users"/>
     </Head>
     <div className={styles.title}>
-      <h1>Home Page</h1>
-      <p className={styles.text}>This is the home page</p>
+      <h1>Home</h1>
+      <p className={styles.text}>Welcome to the home page</p>
       <Link href="/users">
         <a className={styles.btn}>See Users</a>
       </Link>
