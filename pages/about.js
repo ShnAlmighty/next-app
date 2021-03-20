@@ -1,15 +1,16 @@
 import Head from 'next/head'
+import styles from '../styles/About.module.css'
 
 const About = () => {
     return ( 
         <>
         <Head>
-        <title>Ninja List | About</title>
-        <meta name="keywords" content="ninjas"/>
+        <title>Users List | About</title>
+        <meta name="keywords" content="users"/>
         </Head>
         <div>
-            <h1>About</h1>
-            <p>This is the about page</p>
+            <h1 className={styles.h2}>About</h1>
+            <p className={styles.container}>This is the about page</p>
         </div>
         </>
      );

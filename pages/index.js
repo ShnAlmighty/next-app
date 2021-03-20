@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <>
     <Head>
-        <title>Ninja List | Home</title>
-        <meta name="keywords" content="ninjas"/>
+        <title>Users List | Home</title>
+        <meta name="keywords" content="users"/>
     </Head>
     <div className={styles.title}>
       <h1>Home Page</h1>
       <p className={styles.text}>This is the home page</p>
-      <Link href="/ninjas">
-        <a className={styles.btn}>See Ninjas</a>
+      <Link href="/users">
+        <a className={styles.btn}>See Users</a>
       </Link>
     </div>
     </>
